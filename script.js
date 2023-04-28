@@ -81,14 +81,20 @@ export function sortbylived() {
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
-    return inventors.sort(function (obj1,obj2) {
-     	  // return (obj1.last - obj2.last)
-		if(obj1.last>obj2.last)
-			return 1;
-		if(obj1.last<obj2.last)
-			return -1;
-		return 0;
-     })
+	const alpha = people.sort((lastOne, nextOne) => {
+        const [aLast, aFirst] = lastOne.split(', ');
+        const [bLast, bFirst] = nextOne.split(', ');
+        return aLast > bLast ? 1 : -1;
+    });
+    return alpha;
+  //   return inventors.sort(function (obj1,obj2) {
+  //    	  // return (obj1.last - obj2.last)
+		// if(obj1.last>obj2.last)
+		// 	return 1;
+		// if(obj1.last<obj2.last)
+		// 	return -1;
+		// return 0;
+  //    })
 }
 
 // 7. Reduce Exercise
