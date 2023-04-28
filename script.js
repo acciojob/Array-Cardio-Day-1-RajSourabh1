@@ -43,7 +43,7 @@ export function myfilter() {
 export function map() {
 	let ans1 = []
     for(let a in inventors){
-		let full = inventors[a].first + inventors[a].last;
+		let full = inventors[a].first +" "+ inventors[a].last;
 		ans1.push(full);
 	}
 	return ans1;
@@ -54,7 +54,7 @@ export function map() {
 // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
 export function sort() {
    return inventors.sort(function (obj1,obj2) {
-     	  return (obj1.year - obj2.year)
+     	  return (obj2.year - obj1.year)
      })
 }
 
