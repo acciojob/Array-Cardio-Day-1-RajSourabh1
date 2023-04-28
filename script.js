@@ -74,7 +74,7 @@ export function reduce() {
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
     return inventors.sort(function (obj1,obj2) {
-     	  return ((obj1.passed - obj1.year)-(obj2.passed - obj2.year))
+     	  return ((obj2.passed - obj2.year)-(obj1.passed - obj1.year))
      })
 }
 
