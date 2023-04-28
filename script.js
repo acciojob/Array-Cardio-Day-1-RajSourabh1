@@ -53,7 +53,7 @@ export function map() {
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
 export function sort() {
-    inventors.sort(function (obj1,obj2) {
+   return inventors.sort(function (obj1,obj2) {
      	  return (obj1.year - obj2.year)
      })
 }
@@ -73,7 +73,7 @@ export function reduce() {
 
 // 5. Sort the inventors by years lived and return the sorted array
 export function sortbylived() {
-     inventors.sort(function (obj1,obj2) {
+    return inventors.sort(function (obj1,obj2) {
      	  return ((obj1.passed - obj1.year)-(obj2.passed - obj2.year))
      })
 }
@@ -81,7 +81,7 @@ export function sortbylived() {
 // 6. sort Exercise
 // Sort the people alphabetically by last name and return the sorted array
 export function sortByLastName() {
-     inventors.sort(function (obj1,obj2) {
+    return inventors.sort(function (obj1,obj2) {
      	  return (obj1.last - obj2.last)
      })
 }
