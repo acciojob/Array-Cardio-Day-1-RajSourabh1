@@ -97,4 +97,12 @@ const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bik
 
 export function reducedSum() {
     // Return an object containing transports as key and its number of occurances as the key's value
+    let ans = {}
+	for(let e of data){
+		if(ans[e])
+			ans[e] += 1
+		else
+			ans[e]=1
+	}
+	return ans;
 }
