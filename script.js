@@ -54,7 +54,7 @@ export function map() {
 // 3. Sort the inventors by birthdate, oldest to youngest and return the sorted array
 export function sort() {
    return inventors.sort(function (obj1,obj2) {
-     	  return (obj2.year - obj1.year)
+     	  return (obj1.year - obj2.year)
      })
 }
 
